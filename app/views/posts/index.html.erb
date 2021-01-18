@@ -2,6 +2,11 @@
 <p>スクレイピング結果を表示中</p>
 
 
+<% @links.each do |link| %>
+<p><%= link_to link.text, "https://www.apple.com/#{link.get_attribute('href') }" %></p>
+<% end %>
+
+
 
 
 <%= link_to "ホーム画面へ", root_path %>
